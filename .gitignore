@@ -1,0 +1,30 @@
+﻿# Compiled output
+*.class
+bin/
+target/
+build/classes/
+
+# Logs
+*.log
+
+# Java archive outputs
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Keep project dependency JARs because this project is not Maven-based
+!src/main/webapp/WEB-INF/lib/*.jar
+
+# Eclipse workspace metadata, if it appears inside this folder
+.metadata/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*

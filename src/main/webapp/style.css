@@ -1,0 +1,67 @@
+/* ===== BODY ===== */
+
+body{
+    background: linear-gradient(135deg,#eef2f7,#d9e4f5);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+    background:#1e293b;
+}
+
+.navbar-brand{
+    color:white !important;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* ===== CARD ===== */
+
+.card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== TITLE ===== */
+
+.title{
+    color:#1e293b;
+    font-weight:bold;
+}
+
+/* ===== INPUT ===== */
+
+.form-control{
+    border-radius:10px;
+    padding:10px;
+}
+
+/* ===== BUTTON ===== */
+
+.btn{
+    border-radius:10px;
+    padding:10px;
+    font-weight:500;
+}
+
+/* ===== TABLE ===== */
+
+.table-container{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.custom-table thead{
+    background:#1e293b;
+    color:white;
+}
+
+.custom-table tbody tr:hover{
+    background:#f1f5f9;
+    transition:0.3s;
+}
