@@ -1,7 +1,6 @@
-package in.soft.controller;
+﻿package in.soft.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import in.soft.entity.User;
 import in.soft.factory.ServiceFactory;
@@ -17,27 +16,31 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/update")
 public class UpdateUserServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
-		process(req, res);
-	}
-
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
-		process(req, res);
-	}
-
-	public void process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
 		try {
 
+			int id = Integer.parseInt(req.getParameter("id"));
+			String name = req.getParameter("name");
+			String email = req.getParameter("email");
+			String password = req.getParameter("password");
+
+			User u = new User();
+			u.setId(id);
+			u.setName(name);
+			u.setEmail(email);
+			u.setPassword(password);
+
 			UserService service = ServiceFactory.getUserService();
+			String status = service.updateUser(u);
 
-			List<User> list = service.viewUser();
+			RequestDispatcher rd = null;
 
-			req.setAttribute("data", list);
-
-			RequestDispatcher rd = req.getRequestDispatcher("display.jsp");
+			if (status.equals("success")) {
+				rd = req.getRequestDispatcher("success.html");
+			} else {
+				rd = req.getRequestDispatcher("fail.html");
+			}
 
 			rd.forward(req, res);
 
