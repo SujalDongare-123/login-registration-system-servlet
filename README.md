@@ -1,4 +1,4 @@
-﻿# Day_49_LoginAnd_RegistrationSystem_Servlet
+﻿#  LoginAnd_RegistrationSystem_Servlet
 
 Login and Registration System built using Java Servlet, JSP, JDBC, MySQL, HTML, CSS, and Apache Tomcat.
 
